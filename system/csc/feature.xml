@@ -131,7 +131,7 @@ jhwan.kim@hdlnc.com  -->
 <CscFeature_Contact_DisableContactPhoto>false</CscFeature_Contact_DisableContactPhoto>
 <CscFeature_Contact_EnableOptionToSelectEmailMMS4EmailAddress>false</CscFeature_Contact_EnableOptionToSelectEmailMMS4EmailAddress>
 <CscFeature_Contact_EnableMyPhonebook>false</CscFeature_Contact_EnableMyPhonebook>
-<CscFeature_Contact_EnableIcon4SyncContact>false</CscFeature_Contact_EnableIcon4SyncContact>
+<CscFeature_Contact_EnableIcon4SyncContact>true</CscFeature_Contact_EnableIcon4SyncContact>
 <CscFeature_Contact_UseUniNameField>false</CscFeature_Contact_UseUniNameField>
 <CscFeature_Contact_UseSeparateAddressField>true</CscFeature_Contact_UseSeparateAddressField>
 <CscFeature_Contact_EnableIPCall>false</CscFeature_Contact_EnableIPCall>
@@ -142,6 +142,7 @@ jhwan.kim@hdlnc.com  -->
 <CscFeature_Contact_EnableCallButtonInList>true</CscFeature_Contact_EnableCallButtonInList>
 <CscFeature_Contact_EnableCopyToDialer>true</CscFeature_Contact_EnableCopyToDialer>
 <CscFeature_Contact_SetLinkCountMaxAs>1000</CscFeature_Contact_SetLinkCountMaxAs>
+<CscFeature_Contact_LimitNameLength>1280</CscFeature_Contact_LimitNameLength>
 
 <!-- Calendar -->
 <CscFeature_Calendar_SetColorOfDays>XXXXXXX</CscFeature_Calendar_SetColorOfDays>
@@ -154,10 +155,6 @@ jhwan.kim@hdlnc.com  -->
 <CscFeature_VoiceCall_TotalCallTime>true</CscFeature_VoiceCall_TotalCallTime>
 <CscFeature_VoiceCall_ServiceNumberDisplay>false</CscFeature_VoiceCall_ServiceNumberDisplay>
 <CscFeature_VoiceCall_RemoveCallButtonInLogsList>false</CscFeature_VoiceCall_RemoveCallButtonInLogsList>
-
-<!-- Clock -->
-<CscFeature_Clock_EnableVolumeKeySetting>true</CscFeature_Clock_EnableVolumeKeySetting>
-<CscFeature_Clock_EnableAlarmSnoozeDefault>true</CscFeature_Clock_EnableAlarmSnoozeDefault>
 
 <!-- Dialer -->
 
@@ -184,7 +181,7 @@ jhwan.kim@hdlnc.com  -->
 <CscFeature_Setting_EnableHwVersionDisplay>true</CscFeature_Setting_EnableHwVersionDisplay>
 <CscFeature_Setting_DisableMenuSoftwareUpdate>true</CscFeature_Setting_DisableMenuSoftwareUpdate>
 <CscFeature_Setting_EnableMenuDownloadContents>true</CscFeature_Setting_EnableMenuDownloadContents>
-<CscFeature_Setting_DefNotificationPanelOrder>Wifi;Flashlight;MobileData;Location;SilentMode;AutoRotate;Bluetooth;Ebook;DormantMode;WiFiHotspot;Brightness;PowerSaving;AllShareCast;MultiWindow;SBeam;Nfc;AirView;AirGesture;SmartNetwork;ToddlerMode;DrivingMode;SmartStay;SmartScroll;SmartPause;Sync;AirplaneMode</CscFeature_Setting_DefNotificationPanelOrder>
+<CscFeature_Setting_DefNotificationPanelOrder>Wifi;MobileData;Location;SilentMode;AutoRotate;Bluetooth;Ebook;DormantMode;WiFiHotspot;Brightness;PowerSaving;AllShareCast;MultiWindow;SBeam;Nfc;AirView;AirGesture;SmartNetwork;ToddlerMode;DrivingMode;SmartStay;SmartScroll;SmartPause;Sync;AirplaneMode</CscFeature_Setting_DefNotificationPanelOrder>
 <CscFeature_Setting_EnableMenuBlockCallMsg>TRUE</CscFeature_Setting_EnableMenuBlockCallMsg>
 
 
@@ -246,13 +243,13 @@ jhwan.kim@hdlnc.com  -->
 <CscFeature_Launcher_DisableTranslucency>true</CscFeature_Launcher_DisableTranslucency>
 
 <!-- SIP -->
-<CscFeature_Sip_DisableMenuKeyboardSwipe>true</CscFeature_Sip_DisableMenuKeyboardSwipe>
+<CscFeature_Sip_DisableMenuKeyboardSwipe>false</CscFeature_Sip_DisableMenuKeyboardSwipe>
 <CscFeature_Sip_EnableContinuousInputInAllEditField>true</CscFeature_Sip_EnableContinuousInputInAllEditField>
 <CscFeature_Sip_ApplyAutoCorrectionPatent>true</CscFeature_Sip_ApplyAutoCorrectionPatent>
 <CscFeature_Sip_DefaultMultiModalKeyAs>VOICE</CscFeature_Sip_DefaultMultiModalKeyAs>
 <CscFeature_Sip_DefaultMultiModalKeyOnHandwritingAs>VOICE</CscFeature_Sip_DefaultMultiModalKeyOnHandwritingAs>
 <CscFeature_Sip_DisableSpaceSuggestion>true</CscFeature_Sip_DisableSpaceSuggestion>
-<CscFeature_Sip_EnableSymbolInSecondary>en_US;es;es_US</CscFeature_Sip_EnableSymbolInSecondary>
+<CscFeature_Sip_EnableSymbolInSecondary>en_US;en_GB;az;ca;cs;da;de;et;es;eu;el;fr;ga;gl;ka;hr;it;is;kk;lv;lt;hu;nb;nl;pl;pt;ru;ro;fi;sr;sk;sl;sv;tr;uk;ko;hy;bg;ar;fa;ur;iw;ja;th;vi;zh;uz;in;mk;ms</CscFeature_Sip_EnableSymbolInSecondary>
 <CscFeature_Sip_SymbolPopupInput>SINGLE</CscFeature_Sip_SymbolPopupInput>
 <CscFeature_Sip_KeepDefInputMethodAs>QWERTY</CscFeature_Sip_KeepDefInputMethodAs>
 <CscFeature_Sip_EnableLanguageToggleButton>false</CscFeature_Sip_EnableLanguageToggleButton>
@@ -260,6 +257,7 @@ jhwan.kim@hdlnc.com  -->
 <CscFeatureSipAddCommaKeyAsDefault>true</CscFeatureSipAddCommaKeyAsDefault>
 <CscFeature_Sip_TutorialPopupType>TWO</CscFeature_Sip_TutorialPopupType>
 <CscFeature_Sip_AlternativeCharPopupInput>Stay</CscFeature_Sip_AlternativeCharPopupInput>
+<CscFeature_Sip_UseSymbolInCMKey>true</CscFeature_Sip_UseSymbolInCMKey>
 
 <!-- IMS -->
 <CscFeature_IMS_EnableIMS>false</CscFeature_IMS_EnableIMS>
@@ -269,7 +267,7 @@ jhwan.kim@hdlnc.com  -->
 <CscFeature_IMS_EnableRCSPresence>false</CscFeature_IMS_EnableRCSPresence>
 
 <!-- CIQ -->
-<CscFeature_CIQ_BroadcastState>true</CscFeature_CIQ_BroadcastState>
+<CscFeature_CIQ_BroadcastState>false</CscFeature_CIQ_BroadcastState>
 
 </FeatureSet>
 </SamsungMobileFeature>
