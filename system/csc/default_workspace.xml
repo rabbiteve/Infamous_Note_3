@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+
+-->
+
+<favorites xmlns:launcher="http://schemas.android.com/apk/res/com.sec.android.app.launcher" >
+
+    <home>
+       <!-- Personal Screen 0 -->
+        <appwidget            
+            launcher:packageName="com.sec.android.widgetapp.personalfolderwidget"			                     
+            launcher:className="com.sec.android.widgetapp.personalfolderwidget.appwidget.SecretboxWidgetProvider"
+            launcher:screen="0"
+            launcher:x="0"
+            launcher:y="0" 
+            launcher:spanX="4"
+            launcher:spanY="3"
+            launcher:secret="1" />	
+			
+        <!-- Screen 0 -->
+   
+        <!-- Screen 1 -->
+	<!--T-Mobile TV-->
+	<appwidget 
+		launcher:packageName="com.mobitv.client.tmobiletvhd" 
+		launcher:className="com.mobitv.client.tmobiletvhd.LargeTvAppWidget" 
+		launcher:screen="1" 
+		launcher:x="0" 
+		launcher:y="0" 
+		launcher:spanX="4" 
+		launcher:spanY="2" />
+
+	<!--Mobile HotSpot-->
+	<favorite 
+		launcher:packageName="com.android.settings" 
+		launcher:className="com.android.settings.Settings$TetherSettingsActivity2" 
+		launcher:screen="1" 
+		launcher:x="0" 
+		launcher:y="3" />
+	
+	<!--Visual Voicemail-->
+	<favorite 
+		launcher:packageName="com.tmobile.vvm.application" 
+		launcher:className="com.tmobile.vvm.application.activity.setup.WelcomeActivity" 
+		launcher:screen="1" 
+		launcher:x="1" 
+		launcher:y="3" />
+	
+	<!--Gallery-->
+	<favorite 
+		launcher:packageName="com.sec.android.gallery3d" 
+		launcher:className="com.sec.android.gallery3d.app.Gallery" 
+		launcher:screen="1" 
+		launcher:x="2" 
+		launcher:y="3" />
+
+	<!--Play Store-->
+	<favorite 
+		launcher:packageName="com.android.vending" 
+		launcher:className="com.android.vending.AssetBrowserActivity" 
+		launcher:screen="1" 
+		launcher:x="3" 
+		launcher:y="3" />
+
+  	<!--Screen 2-->
+	<!-- input_module_name -->
+	<sactivitywidget 
+		launcher:packageName="com.sec.android.widgetapp.ap.hero.accuweather" 
+		launcher:className="com.sec.android.widgetapp.ap.hero.accuweather.SurfaceWidgetWeather" 
+		launcher:themeName="AccuWeather (J Weather)" 
+		launcher:screen="2" 
+		launcher:x="0" 
+		launcher:y="0" 
+		launcher:spanX="4" 
+		launcher:spanY="2" />
+	
+	
+	<!--Google Search-->
+	<appwidget 
+		launcher:packageName="com.sec.android.googlesearchwidget" 
+		launcher:className="com.sec.android.googlesearchwidget.GoogleSearchProvider" 
+		launcher:screen="2" 
+		launcher:x="0" 
+		launcher:y="2" 
+		launcher:spanX="4" 
+		launcher:spanY="1" />
+	
+	<!--RomControl-->
+	<favorite 
+                launcher:className="com.aokp.romcontrol.LauncherActivity"
+                launcher:packageName="com.aokp.romcontrol"
+		launcher:screen="2" 
+		launcher:x="0" 
+		launcher:y="3" />
+	
+	<!--Hangouts-->
+	<favorite 
+                launcher:className="com.google.android.apps.babel.phone.BabelHomeActivity"
+                launcher:packageName="com.google.android.talk"
+		launcher:screen="2" 
+		launcher:x="1" 
+		launcher:y="3" />
+	
+	<!--Camera-->
+	<favorite 
+		launcher:packageName="com.sec.android.app.camera" 
+		launcher:className="com.sec.android.app.camera.Camera" 
+		launcher:screen="2" 
+		launcher:x="2" 
+		launcher:y="3" />
+	
+	<!--S Note-->
+	<favorite 
+		launcher:packageName="com.samsung.android.snote" 
+		launcher:className="com.samsung.android.snote.control.ui.filemanager.MainHomeActivity" 
+		launcher:screen="2" 
+		launcher:x="3" 
+		launcher:y="3" />
+
+	<!--Screen 3-->
+	<!--Flipboard-->
+	<appwidget 
+		launcher:packageName="flipboard.app" 
+		launcher:className="flipboard.widget.FlipboardWidgetMedium" 
+		launcher:screen="3" 
+		launcher:x="0" 
+		launcher:y="0" 
+		launcher:spanX="4" 
+		launcher:spanY="2" />
+	
+	<!--Walking mate-->
+	<appwidget 
+		launcher:packageName="com.sec.android.app.shealth" 
+		launcher:className="com.sec.android.app.shealth.widget.homescreenwidget.WalkMateAppWidget" 
+		launcher:screen="3" 
+		launcher:x="0" 
+		launcher:y="2" 
+		launcher:spanX="4" 
+		launcher:spanY="1" />
+
+	<!--Screen 4-->
+	<!--Samsung Hub-->
+	<appwidget 
+		launcher:packageName="com.sec.everglades" 
+		launcher:className="com.sec.everglades.widget.EvergladesWidgetProvider" 
+		launcher:screen="4" 
+		launcher:x="0" 
+		launcher:y="0" 
+		launcher:spanX="4" 
+		launcher:spanY="4" />
+
+    </home>
+
+    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+
+<hotseat>
+
+	<!--Phone-->
+	<favorite 
+		launcher:packageName="com.android.contacts" 
+		launcher:className="com.android.contacts.activities.DialtactsActivity" 
+		launcher:screen="0" />
+
+	<!--Contacts-->
+	<favorite 
+		launcher:packageName="com.android.contacts" 
+		launcher:className="com.android.contacts.activities.PeopleActivity" 
+		launcher:screen="1" />
+
+	<!--Messages-->
+	<favorite 
+		launcher:packageName="com.android.mms" 
+		launcher:className="com.android.mms.ui.ConversationComposer" 
+		launcher:screen="2" />
+
+	<!--Internet-->
+	<favorite 
+		launcher:packageName="com.sec.android.app.sbrowser" 
+		launcher:className="com.sec.android.app.sbrowser.SBrowserMainActivity" 
+		launcher:screen="3" />
+</hotseat>
+
+</favorites>

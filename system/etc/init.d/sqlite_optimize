@@ -1,0 +1,79 @@
+#!/system/bin/sh
+
+# ==============================================================
+# ==============================================================
+# ==============================================================
+# Optimize SQlite databases of apps
+# ==============================================================
+# ==============================================================
+# ==============================================================
+# ==============================================================
+
+LOG_FILE=/data/adt/logs/sqlite_optimize.log
+
+if [ -e $LOG_FILE ]; then
+	rm $LOG_FILE;
+fi;
+
+if [ -f $LOG_FILE ]; then
+	touch $LOG_FILE;
+fi;
+chmod 777 $LOG_FILE
+
+echo "# sqlite optimize tweak" | tee -a $LOG_FILE
+echo "" | tee -a $LOG_FILE
+echo "$( date +"%m-%d-%Y %H:%M:%S" ) optimizing and defragging your database files, please wait..." | tee -a $LOG_FILE;
+
+#Interval between Optimize SQlite runs, in seconds, 86400=24 hours
+RUN_EVERY=86400
+
+echo "Optimizing and defragging your database files (*.db)";
+echo "Ignore the 'database disk image is malformed' error";
+echo "Ignore the 'no such collation sequence' error";
+
+if [ -e "/system/xbin/find" ]; then
+	find="/system/xbin/find";
+elif [ -e "/sbin/find" ]; then
+	find="/sbin/find";
+else
+	echo "Find not found! Ask your kernel developer where 'find' is!";
+	exit;
+fi;
+
+
+for i in \
+`$find /data -iname "*.db"`; 
+do \
+	/system/xbin/sqlite3 $i 'VACUUM;'; 
+	/system/xbin/sqlite3 $i 'REINDEX;'; 
+done;
+
+if [ -d "/dbdata" ]; then
+	for i in \
+	`$find /dbdata -iname "*.db"`; 
+	do \
+		/system/xbin/sqlite3 $i 'VACUUM;'; 
+		/system/xbin/sqlite3 $i 'REINDEX;'; 
+	done;
+fi;
+
+
+if [ -d "/datadata" ]; then
+	for i in \
+	`$find /datadata -iname "*.db"`; 
+	do \
+		/system/xbin/sqlite3 $i 'VACUUM;'; 
+		/system/xbin/sqlite3 $i 'REINDEX;'; 
+	done;
+fi;
+
+
+for i in \
+`$find /sdcard -iname "*.db"`; 
+do \
+	/system/xbin/sqlite3 $i 'VACUUM;'; 
+	/system/xbin/sqlite3 $i 'REINDEX;'; 
+done;
+
+echo "" | tee -a $LOG_FILE
+echo "$( date +"%m-%d-%Y %H:%M:%S" ) database files optimization done!" | tee -a $LOG_FILE;

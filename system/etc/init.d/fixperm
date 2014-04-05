@@ -1,0 +1,47 @@
+#!/system/bin/sh
+
+# Permission script
+# Written by (Jovy23) with a special thanks from |ADT|
+# Borrowed by Jamison904 (thanks bro)
+
+mkdir /data/adt
+chmod 777 /data/adt
+mkdir /data/adt/logs
+chmod 777 /data/adt/logs
+
+LOG_FILE=/data/adt/logs/perms.log
+
+if [ -e $LOG_FILE ]; then
+	rm $LOG_FILE;
+fi;
+
+if [ -f $LOG_FILE ]; then
+	touch $LOG_FILE;
+fi;
+chmod 777 $LOG_FILE
+
+sysrw
+echo "Setting permissions" >> $LOG_FILE
+		chmod 0771 /data/app/
+		
+		# standard permissions
+        for file in /system/app/* /system/framework/* /data/app/*; do
+                echo "    setting permissions (644) for $file" >> $LOG_FILE
+                chmod 0644 $file
+        done
+		
+		# su
+		chmod 06755 /system/bin/su
+		chmod 06755 /system/xbin/su
+		
+        
+        echo "chmodding init.d folder"
+        chmod 0777 /system/etc/init.d
+        
+		chmod 0755 /system/etc/init.d
+        for file in /system/etc/init.d/*; do
+                echo "    setting permissions (777) for $file" >> $LOG_FILE
+                chmod 0755 $file
+        done
+echo "Permissions set" >> $LOG_FILE
+sysro
